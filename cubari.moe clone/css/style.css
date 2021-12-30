@@ -170,7 +170,7 @@ a {
     box-shadow: 0 0 140vh 100vh #000 inset;
     pointer-events: none;
     z-index: -1;
-    background: url(../images/download.png);
+    background: url('https://raw.githubusercontent.com/subject-f/cubarimoe/master/static_global/cubari_logo.png');
 }
 
 form.search {
