@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/banner.css" />
+        <script
+            src="https://kit.fontawesome.com/8501b8d8ff.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Document</title>
+    </head>
+    <body id="body">
+
+
+        <article class="about" id="about" style="display: none;">
+            <button class="diamond" id="close-about" onclick="closeAbout()"></button>
+            <div class="container">
+                <h2>What's this thing?</h2>
+                <p>This website is an image proxy. It takes images from other websites and displays them in a better manga-oriented reader, Cubari.</p>
+                <p>Cubari does not host any of the content you are viewing. Just like your computer does not store or own all the images you see on the internet, Cubari is doing the same thing. We are simply a service that lets you view other data on the internet using our custom UI.</p>
+                <p>This reader was born while developing Guya.moe, the website to host Kaguya. After a while we added a lot of useful features, and now we branched it into a separate domain. We don't host anything, this is just a web image viewer that can parse other websites.</p>
+                
+                <h2>What are the sites you can proxy?</h2>
+                <p>Currently it supports imgur, nhentai and custom appropriately-formatted JSON hosted on GitHub Gists. This is an advanced feature and will be explained in detail below.</p>
+                
+                <h2>Are you the next Mangadex?</h2>
+                <p>No, but we might become a web version Tachiyomi. This is not a guarantee, though.</p>
+                
+                <h2>Add [X]!</h2>
+                <p>For now we wont accept feature requests because we have a pretty straightforward roadmap that we need to realize first. Keep an eye on us, something new might pop up soon.</p>
+                
+                <h2>What will happen to Guya?</h2>
+                <p>Nothing. We're still fans of Kaguya, so it will just stay there on Guya.moe and will continue utilizing our nice manga reader. We're just branching out the proxy stuff.</p>
+
+                <h2>Github Gists</h2>
+                <p>Supplying the reader with special code that tells the reader where the images are lets you display series of chapters. A thorough guide can be found in this <a href="#">reddit post</a> while we work on making a user-friendly constructor for this.</p>
+
+                <h2>Data Synchronisation</h2>
+                <p>You can synchronise your reading history across different devices using a third-party data storage service that's powered by the open source <span class="remote-storage">remotestorage</span> protocol. Visit our homepage and scroll down to learn more.</p>
+
+                <h2>What about Tachiyomi?</h2>
+                <p>We support that too! Get the extension <a href="#">here</a>. It unlocks the ability to open Cubari links in the app. In addition, if you sign into a remotestorage account [1], the Tachiyomi extension will show your reading history and pinned galleries.
+                </p>
+                <p class="italic"> <sup>[1]</sup> You must first open a webview and sign into your <span class="remote-storage">remotestorage</span> account</p>
+            </div>
+            </article>
+
+        <main>
+            <header>
+                <div class="banner">
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                    ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                    ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                    ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                    ><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+                <div class="container">
+                    <a href="#" class="scroll "id="scroll" ><span>‹</span> send coffee <span>›</span></a>
+                    <button class="diamond"  id="open-about scroll" onclick="openAbout()"></button>
+                </div>
+            </header>
+
+            <section class="hero">
+                <div class="container">
+                    <div class="center">
+                        <div class="home-background"></div>
+                        <h1 id="scroll">CUBARI</h1>
+                        <h2 id="scroll">The reader could be better.</h2>
+
+                        <form action="" class="search">
+                            <input
+                                type="text"
+                                name="search"
+                                id="search"
+                                placeholder="Imgur, NH, MD, mangasee, git.io link..."
+                            />
+                            <a href="#"><i class="fas fa-caret-right"></i></i></a>
+                        </form>
+
+                        <p class="description">
+                            To unite several chapters under one gist link,
+                            <br />
+                            you can use this <a href="#" class="useful-tool-link">useful tool</a> by
+                            Stirante.
+                        </p>
+                    </div>
+                    <div class="bottom">
+                        <a href="#" >
+                            <img id="scroll"
+                                src="https://cubari.moe/static/img/gmprj.png"
+                                alt=""
+                            />
+                        </a>
+
+                        <a href="#history" class="history-link " id="scroll">
+                            <span>YOUR HISTORY</span><br />
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <section id="history">
+            <div class="container">
+
+                <div class="history-top">
+                    <h2>Your history</h2>
+                    <button>Clear history</button>
+                </div>
+                <div class="synchronisation">
+                    <h2>History synchronisation</h2>
+                    <p>
+                        You can synchronize your reading history and pinned
+                        galleries across different devices. <br> This is done using a
+                        third-party data storage service &lpar;which you can
+                        also host yourself <br> to have full control over your
+                        data&rpar;.
+                    </p>
+                    <p>
+                        To get started, create an account with any
+                        <span class="remote-storage">remotestorage</span> provider. We recommend <br>
+                        <a href="#" class="apps-link"> 5apps</a> since it's free.
+                    </p>
+                    <p>
+                        Once you've created an account &lpar;eg.
+                        <span class="user-apps-email">user@5apps.com</span>&rpar;, log in below:
+                    </p>
+                    <button class="login-5apps">
+                        <svg>
+                            <path
+                                style="fill: #fff"
+                                sodipodi:nodetypes="ccsccscccccccsccsccccccssscscccscsscc"
+                                id="path2"
+                                d="m 19,12 v 1.5 c 2.21,0 4,1.79 4,4 0,0.82 -0.25,1.58 -0.67,2.21 L 21.24,18.62 C 21.41,18.28 21.5,17.9 21.5,17.5 21.5,16.12 20.38,15 19,15 v 1.5 L 16.75,14.25 16.72,14.22 C 16.78,14.17 16.85,14.13 19,12 m 0,11 v -1.5 c -2.21,0 -4,-1.79 -4,-4 0,-0.82 0.25,-1.58 0.67,-2.21 l 1.09,1.09 c -0.17,0.34 -0.26,0.72 -0.26,1.12 0,1.38 1.12,2.5 2.5,2.5 v -1.5 l 2.25,2.25 0.03,0.03 C 21.22,20.83 21.15,20.87 19,23 M 13.03,18 H 6 C 3.79,18 2,16.21 2,14 2,11.79 3.79,10 6,10 H 6.71 C 7.37,7.69 9.5,6 12,6 c 3,0 5.4,2.37 5.5,5.32 0.62,-0.21 1.3,-0.32 2,-0.32 -0.04884,-0.4762 -0.02193,-0.193394 -0.15,-0.97 C 18.67,6.59 15.64,4 12,4 9.11,4 6.6,5.64 5.35,8.03 2.34,8.36 0,10.9 0,14 c 0,3.31 2.69,6 6,6 h 7.5 c -0.26,-0.62 -0.42,-1.3 -0.47,-2 z"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="separator"></div>
+                <button class="turn-off-history-button">Turn off history and destroy local data</button>
+            </div>
+        </section>
+
+        <script src="./js/index.js"></script>
+    </body>
+</html>

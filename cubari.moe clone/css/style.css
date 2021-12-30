@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "open sans";
+}
+
+body {
+    background: #1c1c1c;
+    color: white;
+}
+
+@font-face {
+    font-family: guya;
+    src: url(../fonts/guya.woff);
+}
+
+main {
+    background-color: rgb(17, 17, 17);
+    height: 100vh;
+}
+
+header {
+    height: 100px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: flex-end;
+}
+
+header .container a {
+    color: #e25656;
+    margin: 2rem;
+    font-family: open sans, sans-serif;
+    height: max-content;
+}
+
+header .container a:hover {
+    color: #fff;
+}
+
+header .container a span {
+    font-size: 1.8em;
+    margin: 5px;
+}
+
+.diamond {
+    color: #e25656;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 2px;
+    margin: 2rem;
+    transform: rotate(45deg);
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.diamond::before {
+    color: #e25656;
+    content: "?";
+    transform: rotate(-45deg);
+}
+
+.diamond:hover {
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.diamond:hover::before {
+    color: white;
+}
+
+.hero {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.hero .container .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.hero .container .center p {
+    text-align: center;
+}
+
+.hero .container .center h1 {
+    font-size: 3.5rem;
+    font-weight: 100;
+    font-family: "open sans", sans-serif;
+    letter-spacing: 0.7em;
+    margin: 0%;
+}
+
+.hero .container .center h2 {
+    color: rgb(136, 136, 136);
+    font-weight: 400;
+    font-size: 0.8rem;
+    margin-bottom: 32px;
+    font-style: italic;
+}
+
+.hero .container .bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.hero .container .bottom a img {
+    height: 35px;
+    margin: 2rem;
+}
+
+.hero .container .bottom a.history-link {
+    margin: 2rem;
+    color: white;
+    height: max-content;
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.home-background {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.home-background::before {
+    content: "";
+    width: 300vh;
+    height: 300vh;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 50% 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(14deg);
+    box-shadow: 0 0 140vh 100vh #000 inset;
+    pointer-events: none;
+    z-index: -1;
+    background: url(../images/download.png);
+}
+
+form.search {
+    background-color: #fff;
+    padding: 10px;
+    height: 20px;
+    width: 550px;
+    border-radius: 5px;
+    position: relative;
+}
+
+input#search {
+    border: none;
+    outline: none;
+    height: 100%;
+    font-size: 16px;
+    width: 100%;
+}
+
+form a {
+    position: absolute;
+    right: 0;
+    margin: 0 10px 0 0;
+    font-size: 16px;
+    color: #e25656;
+}
+
+.fa-caret-right {
+    font-size: 30px;
+    margin-top: -3px;
+}
+
+article {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    /*display: flex;
+    justify-content: center;*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    max-height: 100%;
+    z-index: 2;
+}
+
+article h2 {
+    margin-top: 2em;
+}
+
+article .container p {
+    margin: 20px 0;
+}
+
+article.about .container {
+    background: rgba(28, 28, 28, 0.985);
+    display: block;
+    width: 50rem;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+    z-index: 2;
+    min-height: 100vh;
+}
+
+article .diamond {
+    position: fixed;
+    top: 0;
+    right: 17px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+article .diamond::before {
+    color: #e25656;
+    font-size: 1.5em;
+    content: "X";
+    transform: rotate(-45deg);
+}
+
+article .container p a {
+    color: #e25656;
+}
+
+article .container p a:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.hero .container .center p.description {
+    margin-top: 20px;
+    font-family: "open sans", sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+}
+
+.hero .container .center p.description a {
+    color: #e25656;
+}
+
+.hero .container .center p.description a:hover {
+    color: #fff;
+}
+
+#history .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#history .history-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#history .history-top h2,
+#history .history-top button {
+    margin: 2rem;
+}
+
+#history .history-top h2 {
+    font-weight: 100;
+    font-size: 30px;
+}
+
+#history .history-top button {
+    color: #e25656;
+    background-color: #1c1c1c;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.6em 1em;
+    font-size: 14px;
+    border-radius: 0.2em;
+}
+
+#history .history-top button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+}
+
+#history .synchronisation h2 {
+    margin-bottom: 20px;
+}
+
+#history .synchronisation p {
+    margin-bottom: 20px;
+}
+
+#history .synchronisation p a.apps-link {
+    color: #e25656;
+}
+
+#history .synchronisation p a.apps-link:hover {
+    color: #fff;
+}
+
+.remote-storage {
+    font-family: monospace;
+    font-size: 1.2em;
+}
+
+#history .synchronisation p .user-apps-email {
+    font-family: monospace;
+    font-size: 1.2em;
+}
+
+#history .synchronisation .login-5apps {
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    background-color: #1c1c1c;
+    border-radius: 0.2em;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    margin: 50px auto 50px auto;
+}
+
+#history .synchronisation .login-5apps:hover {
+    cursor: pointer;
+}
+
+#history .synchronisation .login-5apps svg {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
+.separator {
+    height: 1px;
+    width: 95vw;
+    margin: 0 2rem 0 2rem;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.turn-off-history-button {
+    margin: 50px 0 50px 0;
+    color: #e25656;
+    background-color: #1c1c1c;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.6em 1em;
+    font-size: 14px;
+    border-radius: 0.2em;
+}
+
+.turn-off-history-button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+}
+
+#scroll {
+    transition: 0.25s ease-in;
+}
+
+.hide-after-scroll #scroll {
+    opacity: 0;
+}
